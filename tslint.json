@@ -1,0 +1,13 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "object-literal-sort-keys": false,
+        "variable-name": [true, "allow-snake-case","allow-pascal-case"],
+        "no-var-requires": false
+    },
+    "rulesDirectory": []
+}

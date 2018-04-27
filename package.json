@@ -1,0 +1,43 @@
+{
+  "name": "circle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "heymind",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^4.6.0",
+    "class-validator": "^0.8.5",
+    "db-migrate": "^0.11.1",
+    "dotenv": "^5.0.1",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-jwt": "^3.3.1",
+    "koa-log4": "^2.3.0",
+    "koa-router": "^7.4.0",
+    "log4js": "^2.5.3",
+    "nodemailer": "^4.6.4",
+    "password-validator": "^4.1.0",
+    "pg": "^7.4.1",
+    "pg-error-constants": "^1.0.0",
+    "typescript": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^7.2.6",
+    "@types/koa": "^2.0.45",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-jwt": "^3.3.0",
+    "@types/koa-logger": "^3.1.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/pg": "^7.4.7",
+    "@types/winston": "^2.3.9",
+    "db-migrate-pg": "^0.4.0",
+    "nodemon": "^1.17.3",
+    "ts-node": "^6.0.0",
+    "tsconfig-paths": "^3.3.1",
+    "tslint": "^5.9.1",
+    "types-installer": "^1.4.0"
+  }
+}
