@@ -8,10 +8,10 @@ create table users (
     password_hashed text not null,
     password_salt text not null,
     email_confirmed boolean not null default false,
-    profile json,   
+    profile jsonb default jsonb '{}',
     created timestamp(0) with time zone not null default current_timestamp,
     updated timestamp(0) with time zone not null default current_timestamp,
     deleted timestamp(0) with time zone
 );
 create unique index users_unique_lower_idx on users (lower(email));
-create view real_users as select id,email,username,nickname,avatar,created,updated from users where deleted is null and email_confirmed is true;
+create view real_users as select id,email,username,nickname,avatar,profile,created,updated from users where deleted is null and email_confirmed is true;

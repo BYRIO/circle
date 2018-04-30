@@ -59,7 +59,7 @@ export async function register(user: User) {
         salt,
       ],
     );
-    _sendEmail(user.id, user.email).then();
+    _sendEmail(result.rows[0].id, user.email).then();
     return result.rows[0];
   } catch (err) {
     const { constraint, code } = err;
@@ -111,6 +111,7 @@ export async function confirmEmail(token: string) {
       "select email_confirmed from users where id = $1 and deleted is null",
       [confirm_id],
     );
+    console.log(result.rows[0],jwt.verify(token, JWT_SECRET));
     const { email_confirmed } = result.rows[0];
     if (email_confirmed) { throw new Error(`User(${confirm_id}) already confirmed.`); }
     result = await Query(

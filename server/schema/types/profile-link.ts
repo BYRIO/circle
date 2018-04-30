@@ -5,7 +5,6 @@ export const ProfileLinkType = new GraphQLObjectType({
     description:"a profile link",
     fields:{
         label:{type:GraphQLString},
-        color:{type:GraphQLString},
         url:{type:GraphQLString},
     }
 });
